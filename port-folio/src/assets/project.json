@@ -1,0 +1,122 @@
+[
+    {
+        "id": 0,
+        "title": "PiePHP",
+        "language": "PHP MVC",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/-W-PHP-502-MAR-2-1-PiePHP-erwan.durey-",
+        "content": "Création d'un framework basé sur CakePHP et Symfony.",
+        "describe": "Vous avez n’avez pas encore appris comment utiliser CakePHP et Laravel, mais ce n’est pas grave car votre curiosité est sans limite ! Nous allons voir dans ce projet, une partie des mécanismes nécessaires au fonctionnement d’un framework MVC (Model/View/Controller). Plus que jamais, vous comprendrez l’intégralité du code que vous produirez : rien ne sera fait au hasard dans votre framework, sinon celui-ci ne fonctionnera pas, c’est une certitude. Tout ce qui vous sera proposé dans ce sujet sera parfaitement adapté à une configuration LAMP classique sur Ubuntu, à vous de l’adapter en fonction de votre configuration.",
+        "time": "2 semaines",
+        "type": "Individuel"
+    },
+    {
+        "id": 1,
+        "title": "My_IRC",
+        "language": "Node JS, Socket IO, react, Express",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-JSC-502-MAR-2-1-irc-erwan.durey",
+        "content": "Création d'un mini IRC avec NodeJS et SocketIO.",
+        "describe": "Réaliser un serveur IRC grâce à NodeJS. Votre serveur devra accepter plusieurs connexions simultanées. Votre serveur devra implémenter la notion de “channels”. Il doit être possible de rejoindre plusieurs “channels” simultanément (Par exemple via un système d’onglet).",
+        "time": "2 Semaines",
+        "type": "Individuel"
+    },
+    {
+        "id": 2,
+        "title": "My_snapchat",
+        "language": "react Native, node js, express",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-JSC-502-MAR-2-1-snapchat-erwan.durey",
+        "content": "Création d'un clone de Snapshat avec React Native.",
+        "describe": "Vous avez décidé de créer une application mobile qui envoie des images à vos amis pour un certain laps de temps, puis qui seront supprimées par la suite en utilisant une API fournis. Vous allez appeler cette merveilleuse invention my_snapchat. Il ne vous manque plus qu’à créer votre magnifique interface.",
+        "time": "1 semaine",
+        "type": "En groupe de 3"
+    },
+    {
+        "id": 3,
+        "title": "My_Battleship",
+        "language": "JS, HTML, CSS",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-JSC-501-MAR-1-1-battleship-erwan.durey",
+        "content": "Reprenez le projet inachevé de quelqu’un d’autre.",
+        "describe": "Vous reprenez le projet inachevé (archive disponible avec ce sujet) de quelqu’un d’autre. Vous allez devoir le débugger et terminer le projet. Nous vous recommandons de bien prendre connaissance de l’ensemble du code (il y a plusieurs fichiers inclus dans la page HTML). Il peut également être de bon ton de se renseigner sur les librairies tierces utilisées. Le précédent développeur même s’il vous a laissé un projet inachevé, s’est appliqué à mettre en place de bonnes pratiques d’architecture, et/ou des astuces de code, inspirez-vous ! Par ailleurs il vous a laissé un peu de documentation et des commentaires dans le code, exploitez les ! Nous vous recommandons également de faire des “commits atomiques” (si ce terme ne vous dit rien, renseignez-vous) cela vous permettra plus facilement de revenir en arrière si besoin.",
+        "time": "2 semaines",
+        "type": "En groupe de 2"
+    },
+    {
+        "id": 4,
+        "title": "My_h5ai",
+        "language": "PHP, JS",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-PHP-501-MAR-1-1-myh5ai-erwan.durey",
+        "content": "Indexeur de fichiers pour serveurs web HTTP",
+        "describe": "Vous devez mettre en place une arborescence de fichiers permettant à l’utilisateur d’améliorer l’interface de l’index de son serveur. Pour cela, vous devrez capturer l’url demandée par l’utilisateur et afficher une arborescence des fichiers et dossiers demandés. L’URL doit respecter l’arborescence de fichiers dossiers",
+        "time": "2 semaines",
+        "type": "Individuel"
+    },
+    {
+        "id": 5,
+        "title": "My_Spotify",
+        "language": "PHP, React, JS",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-WEB-090-MAR-1-1-spotify-erwan.durey",
+        "content": "Création d’un lecteur multimédia online en découvrant react",
+        "describe": "Dans ce sujet, vous allez devoir créer un site exploitant une API. API est un acronyme pour Application Programming Interface; c’est une interface de programmation qui permet de se “brancher” sur une application pour échanger des données.",
+        "time": "2 jours",
+        "type": "En groupe 4"
+    },
+    {
+        "id": 6,
+        "title": "Tweet_Academie",
+        "language": "PHP, JS",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-WEB-090-MAR-1-1-academie-erwan.durey",
+        "content": "Recréer un réseau social basé sur twitter",
+        "describe": "Le but de ce projet est de créer un réseau social pour les étudiants de votre promotion, qui aura les mêmes fonctionnalités que twitter. Il devra être le plus ressemblant possible en terme de fonctionnalités par rapport au site “Twitter”.",
+        "time": "1 mois",
+        "type": "En groupe 3"
+    },
+    {
+        "id": 7,
+        "title": "My_Meetic",
+        "language": "JQuery, PHP",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-PHP-501-MAR-1-1-mymeetic-erwan.durey",
+        "content": "Projet web orienté ajax, jquery, et PHP orienté objet",
+        "describe": "Le but du projet est de créer un site de rencontres à la manière d’un Meetic. Nous vous proposons de l’orienter vers la rencontre de personne dans un bahut qui partageraient des points communs par exemple. Il est obligatoire de programmer en PHP orienté objet. Il est fortement conseillé lors d’un envoi de données d’effectuer une requête ajax en JQuery afin de vérifier et envoyer les données, puis traiter la réponse. Il est obligatoire de gérer tous les cas d’erreurs possibles (injections SQL, doublons en DB, etc. . . ).",
+        "time": "3 semaines",
+        "type": "Individuel"
+    },
+    {
+        "id": 8,
+        "title": "My_Cinema",
+        "language": "PHP, SQL, Bootstrap CSS, JS",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/W-PHP-501-MAR-1-1-mycinema-erwan.durey",
+        "content": "Site de référencement de films & administration de cinema",
+        "describe": "À partir de la base de données MySQL fournie avec le sujet, vous allez devoir réaliser un site qui permettra d’interagir avec cette dernière. Ne passez pas trop de temps sur l’aspect visuel du site, le but du projet est orienté PHP et MySQL. Pensez bien à séparer le code permettant l’affichage et le code permettant la logique. Bien entendu, votre page devra être valide HTML5 et nous tiendrons compte de l’aspect général du site.",
+        "time": "2 semaines",
+        "type": "Individuel"
+    },
+    {
+        "id": 9,
+        "title": "My_Quiz",
+        "language": "PHP, Symfony",
+        "img": "https://placeimg.com/400/400/arch",
+        "alt": "Man looking at item at a store",
+        "link": "https://github.com/erwanepitech/-W-PHP-502-MAR-2-1-Quiz-erwan.durey-",
+        "content": "Site de quiz avec sytem analytic pour cibler le contenu",
+        "describe": "Vous allez développer un site qui permet de tester sa culture générale à travers des quiz. Dans le but de cibler le contenu que votre site proposera, vous pouvez relever l’activité de vos utilisateurs. Pour cela vous devez récolter un maximum d’informations sur eux, sur les sujets qui les intéressent, leurs habitudes, leurs préférences, etc.",
+        "time": "2 semaines",
+        "type": "En groupe 3"
+    }
+]
