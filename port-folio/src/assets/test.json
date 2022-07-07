@@ -1,0 +1,26 @@
+[
+    {
+        "language": [
+            {
+                "php": [
+                    {
+                        "framework": "Laravel, Symphony",
+                        "type": "MVC, POO"
+                    }
+                ],
+                "javascript": [
+                    
+                ],
+                "sql": [
+
+                ],
+                "html": [
+
+                ],
+                "css": [
+
+                ]
+            }
+        ]
+    }
+]

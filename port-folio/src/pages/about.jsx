@@ -2,8 +2,18 @@ import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Pdf from '../components/pdf'
 import image from '../assets/ErwanDUREY.png'
+import pdf_file from '../assets/cv.pdf'
+import language from '../assets/langage.json'
+// import test from '../assets/test.json'
+import logo from '../assets/image'
 
 function App() {
+
+
+    // test.map((language) => {
+
+    //     console.log(language.language[0].php[0].type);
+    // })
 
     const [open, setOpen] = useState(false);
     const handeleOpen = () => setOpen(true)
@@ -14,41 +24,13 @@ function App() {
         handeleOpen()
     }
 
-    const products = [
-        {
-            id: 1,
-            name: 'Earthen Bottle',
-            href: '#',
-            price: '$48',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
-            imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
-        },
-        {
-            id: 2,
-            name: 'Nomad Tumbler',
-            href: '#',
-            price: '$35',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
-            imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
-        },
-        {
-            id: 3,
-            name: 'Focus Paper Refill',
-            href: '#',
-            price: '$89',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
-            imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
-        },
-        {
-            id: 4,
-            name: 'Machined Mechanical Pencil',
-            href: '#',
-            price: '$35',
-            imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-            imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-        },
-        // More products...
-    ]
+    const download = () => {
+        // document.getElementById("download").click()
+        var link = document.createElement('a');
+        link.href = pdf_file;
+        link.download = 'cv.pdf';
+        link.dispatchEvent(new MouseEvent('click'));
+    }
 
     return (
         <div>
@@ -80,11 +62,11 @@ function App() {
                                     <div className="bg-gray-800 px-2 pt-5 pb-4 sm:p-6 sm:pb-4">
                                         <div className="sm:flex sm:items-start">
 
-                                            <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                                            <div className="mt-3 text-center sm:mt-0 sm:text-left">
                                                 <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-indigo-500">
 
                                                 </Dialog.Title>
-                                                <div className="mt-2 sm:h-[45rem]">
+                                                <div className="mt-2">
                                                     <Pdf />
                                                 </div>
                                             </div>
@@ -100,7 +82,7 @@ function App() {
                                             Fermer
                                         </button>
                                         <button
-                                            onClick={handelClick}
+                                            onClick={download}
                                             type="button"
                                             class="mt-2 w-full rounded-md shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm flex justify-center"
                                         >
@@ -152,7 +134,7 @@ function App() {
                                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                         </svg>
-                                        <span class="ml-2">Télécharger</span>
+                                        <span class="ml-2">Visualiser cv</span>
                                     </button>
                                 </div>
                             </div>
@@ -160,31 +142,121 @@ function App() {
                     </div>
                 </div>
 
-                <div className="bg-gray-800">
-                    <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                        <h2 className="sr-only">Products</h2>
+                <div class="flex md:items-center md:justify-center">
+                    <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">MES COMPÉTENCES</h1>
+                </div>
 
-                        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-                            {products.map((product) => (
-                                <a key={product.id} href={product.href} className="group">
-                                    <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
-                                        <img
-                                            src={product.imageSrc}
-                                            alt={product.imageAlt}
-                                            className="w-full h-full object-center object-cover group-hover:opacity-75"
-                                        />
-                                    </div>
-                                    <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-                                    <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
-                                </a>
-                            ))}
+                <div className='flex justify-between items-center'>
+
+                    <div class="flex items-center justify-center">
+                        <div class="bg-gray-800 rounded-lg shadow-xl p-8">
+                            <div class="mb-4">
+                                <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">JS</h1>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/43.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Vivian Davie</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/men/81.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Derry Harris</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Aliesha Hanson</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/13.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Cristina Frederick</h1>
+                                    <button class="px-6 py-1 border-2 border-indigo-600 rounded-full text-gray-50 font-semibold">Following</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="flex items-center justify-center">
+                        <div class="bg-gray-800 rounded-lg shadow-xl p-8">
+                            <div class="mb-4">
+                                <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">JS</h1>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/43.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Vivian Davie</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/men/81.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Derry Harris</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Aliesha Hanson</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/13.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Cristina Frederick</h1>
+                                    <button class="px-6 py-1 border-2 border-indigo-600 rounded-full text-gray-50 font-semibold">Following</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <div class="bg-gray-800 rounded-lg shadow-xl p-8">
+                            <div class="mb-4">
+                                <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">JS</h1>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/43.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Vivian Davie</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/men/81.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Derry Harris</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Aliesha Hanson</h1>
+                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                                </div>
+                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
+                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/13.jpg" alt="user image" />
+                                    <h1 class="text-gray-50 font-semibold">Cristina Frederick</h1>
+                                    <button class="px-6 py-1 border-2 border-indigo-600 rounded-full text-gray-50 font-semibold">Following</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div >
+            </div>
         </div>
     )
 
 }
 
 export default App
+
+// {language.map((product) => (
+//     <a key={product.id} href={product.href} className="group">
+//         <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+//             <img
+//                 src={product.imageSrc}
+//                 alt={product.imageAlt}
+//                 className="w-full h-full object-center object-cover group-hover:opacity-75"
+//             />
+//         </div>
+//         <h3 className="mt-4 text-sm text-gray-400">{product.name}</h3>
+//         {/* <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p> */}
+//     </a>
+// ))}

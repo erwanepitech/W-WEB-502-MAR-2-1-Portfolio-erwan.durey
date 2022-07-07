@@ -22,7 +22,7 @@ function App() {
                 <Document
                     file={url}
                     onLoadSuccess={onDocumentLoadSuccess}
-                    // className="xs:w-80 xs:h-80"
+                    // className="w-full h-full xs:w-96 xs:h-96 mx-1 items-center"
                 >
                     <Page pageNumber={pageNumber} />
                 </Document>
