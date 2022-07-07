@@ -158,7 +158,7 @@ function App() {
             </Transition.Root>
             <>
                 <div className='container mx-auto'>
-                <ParticlesBackground/>
+                {/* <ParticlesBackground/> */}
                 <div className="flex items-center justify-center">
                     <h4 className="mt-10 text-xl md:text-4xl font-medium leading-snug text-white">Une demande ?</h4>
                 </div>

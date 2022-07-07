@@ -8,7 +8,6 @@ function App() {
     }
 
     const particlesLoaded = (container) => {
-        console.log(container);
     }
 
     return (

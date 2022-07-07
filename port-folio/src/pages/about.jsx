@@ -4,8 +4,6 @@ import Pdf from '../components/pdf'
 import image from '../assets/ErwanDUREY.png'
 import pdf_file from '../assets/cv.pdf'
 import language from '../assets/langage.json'
-// import test from '../assets/test.json'
-import logo from '../assets/logo'
 import ParticlesBackground from "../components/particles";
 function App() {
 
@@ -93,7 +91,7 @@ function App() {
                 </Dialog>
             </Transition.Root>
             <div className='container mx-auto'>
-            <ParticlesBackground/>
+            {/* <ParticlesBackground/> */}
                 <div className="relative max-w-md mx-auto md:max-w-2xl mt-20 min-w-0 break-words bg-gray-800 w-full mb-6 shadow-lg rounded-xl">
                     <div className="px-6">
                         <div className="flex flex-wrap justify-center">

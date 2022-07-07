@@ -142,7 +142,7 @@ function App() {
                 </Dialog>
             </Transition.Root>
             <div className='container mx-auto'>
-                <ParticlesBackground />
+                {/* <ParticlesBackground /> */}
 
                 <div className="card mx-8">
                     {card.map((item, k) => (
