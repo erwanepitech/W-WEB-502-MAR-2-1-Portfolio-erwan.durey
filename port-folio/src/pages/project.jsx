@@ -1,6 +1,7 @@
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import project from '../assets/project.json'
+import ParticlesBackground from "../components/particles";
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -57,7 +58,8 @@ function App() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-opacity-75 transition-opacity" />
+                        <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"/>
+                            {/* <ParticlesBackground /> */}
                     </Transition.Child>
                     <div className="fixed z-10 inset-0 overflow-y-auto">
                         <div className="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
@@ -106,7 +108,7 @@ function App() {
                                                             <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
                                                                 <button
                                                                     type="button"
-                                                                    className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                                                                    className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                                                                 >
                                                                     <a className="text-white flex" href={link} target="_blank" rel="noreferrer">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
@@ -126,7 +128,7 @@ function App() {
                                     <div className="bg-gray-900 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button
                                             type="button"
-                                            className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                                            className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                                             onClick={handeleClose}
                                             ref={cancelButtonRef}
                                         >
@@ -140,6 +142,8 @@ function App() {
                 </Dialog>
             </Transition.Root>
             <div className='container mx-auto'>
+                <ParticlesBackground />
+
                 <div className="card mx-8">
                     {card.map((item, k) => (
                         <div key={k}>

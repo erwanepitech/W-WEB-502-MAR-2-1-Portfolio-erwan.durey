@@ -6,7 +6,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Project from './pages/project';
 import Contact from './pages/contact';
-
+// import Particles from "./components/particles";
 import {
 	BrowserRouter as Router,
 	Route,
@@ -16,7 +16,7 @@ import {
 
 function App() {
 	return (
-
+		// <Particles/>
 		<>
 			<Router>
 				<Navbar />

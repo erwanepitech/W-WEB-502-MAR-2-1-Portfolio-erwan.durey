@@ -6,7 +6,7 @@ import pdf_file from '../assets/cv.pdf'
 import language from '../assets/langage.json'
 // import test from '../assets/test.json'
 import logo from '../assets/logo'
-
+import ParticlesBackground from "../components/particles";
 function App() {
 
     const [open, setOpen] = useState(false);
@@ -39,7 +39,7 @@ function App() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-white dark:bg-black dark:bg-opacity-75 transition-opacity" />
+                        <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
                     </Transition.Child>
                     <div className="fixed z-10 inset-0 overflow-y-auto">
                         <div className="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
@@ -69,7 +69,7 @@ function App() {
                                     <div className="bg-gray-900 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button
                                             type="button"
-                                            className="mt-3 w-full rounded-md shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                                            className="mt-3 w-full rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                                             onClick={handeleClose}
                                             ref={cancelButtonRef}
                                         >
@@ -78,12 +78,12 @@ function App() {
                                         <button
                                             onClick={download}
                                             type="button"
-                                            class="mt-2 w-full rounded-md shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm flex justify-center"
+                                            className="mt-2 w-full rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm flex justify-center"
                                         >
-                                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                             </svg>
-                                            <span class="ml-2">Télécharger</span>
+                                            <span className="ml-2">Télécharger</span>
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -93,25 +93,26 @@ function App() {
                 </Dialog>
             </Transition.Root>
             <div className='container mx-auto'>
-                <div class="relative max-w-md mx-auto md:max-w-2xl mt-20 min-w-0 break-words bg-gray-800 w-full mb-6 shadow-lg rounded-xl">
-                    <div class="px-6">
-                        <div class="flex flex-wrap justify-center">
-                            <div class="w-full flex justify-center mb-16">
-                                <div class="relative">
-                                    <img src={image} class="rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]" />
+            <ParticlesBackground/>
+                <div className="relative max-w-md mx-auto md:max-w-2xl mt-20 min-w-0 break-words bg-gray-800 w-full mb-6 shadow-lg rounded-xl">
+                    <div className="px-6">
+                        <div className="flex flex-wrap justify-center">
+                            <div className="w-full flex justify-center mb-16">
+                                <div className="relative">
+                                    <img src={image} className="rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]" />
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-2">
-                            <h3 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">Erwan Durey</h3>
-                            <div class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
-                                <i class="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i>La seyne sur mer, France
+                        <div className="text-center mt-2">
+                            <h3 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">Erwan Durey</h3>
+                            <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
+                                <i className="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i>La seyne sur mer, France
                             </div>
                         </div>
-                        <div class="mt-6 py-6 border-t border-slate-200 text-center">
-                            <div class="flex flex-wrap justify-center ">
-                                <div class="w-full px-4">
-                                    <p class="font-light leading-relaxed text-gray-400 mb-4">Décidé à faire de ma
+                        <div className="mt-6 py-6 border-t border-slate-200 text-center">
+                            <div className="flex flex-wrap justify-center ">
+                                <div className="w-full px-4">
+                                    <p className="font-light leading-relaxed text-gray-400 mb-4">Décidé à faire de ma
                                         passion un métier, j'ai
                                         commencé ma formation
                                         chez Epitech.
@@ -119,16 +120,16 @@ function App() {
                                         ressources capable de
                                         s'adapter aux contraintes
                                         et directives données.</p>
-                                    {/* <a href="" class="font-normal text-slate-700 hover:text-slate-400">Follow Account</a> */}
+                                    {/* <a href="" className="font-normal text-slate-700 hover:text-slate-400">Follow Account</a> */}
                                     <button
                                         onClick={handelClick}
                                         type="button"
-                                        class="mx-auto px-4 py-3 bg-blue-600 hover:bg-blue-800 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform flex"
+                                        className="mx-auto px-4 py-3 bg-indigo-500 hover:bg-indigo-800 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform flex"
                                     >
-                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                         </svg>
-                                        <span class="ml-2">Visualiser cv</span>
+                                        <span className="ml-2">Visualiser cv</span>
                                     </button>
                                 </div>
                             </div>
@@ -136,44 +137,53 @@ function App() {
                     </div>
                 </div>
 
-                <div class="flex items-center justify-center">
-                    <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">MES COMPÉTENCES</h1>
+                <div className="flex items-center justify-center">
+                    <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-5">MES COMPÉTENCES</h1>
                 </div>
 
-
-                <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto">
-
-                    <div class="grid grid-cols-2 md:lg:xl:grid-cols-5 group">
+                <div className="bg-gray-800 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto mb-10">
+                    <div className="flex items-center justify-center">
+                        <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">FRON-END</h1>
+                    </div>
+                    <div className="grid grid-cols-2 md:lg:xl:grid-cols-5 group">
                         {
                             language['front-end'].map((language, k) => (
-                                <div key={k} class="p-5 flex flex-col items-center text-center group">
-                                    <img class="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
-                                    <h1 class="text-gray-50 font-semibold text-sm">{language.name}</h1>
-                                </div>
-                            ))
-                        }
-                        {
-                            language['back-end'].map((language, k) => (
-                                <div key={k} class="p-5 flex flex-col items-center text-center group">
-                                    <img class="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
-                                    <h1 class="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                <div key={k} className="p-5 flex flex-col items-center text-center group">
+                                    <img className="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                    <h1 className="text-gray-50 font-semibold text-sm">{language.name}</h1>
                                 </div>
                             ))
                         }
                     </div>
                 </div>
 
-                {/* <div class="bg-gray-800 rounded-lg shadow-xl p-8 max-h-fit">
-                        <div class="mb-4 flex items-center justify-center">
-                            <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">BACK-END</h1>
+                <div className="bg-gray-800 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto">
+                    <div className="flex items-center justify-center">
+                        <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">BACK-END</h1>
+                    </div>
+                    <div className="grid grid-cols-2 md:lg:xl:grid-cols-5 group">
+                        {
+                            language['back-end'].map((language, k) => (
+                                <div key={k} className="p-5 flex flex-col items-center text-center group">
+                                    <img className="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                    <h1 className="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                {/* <div className="bg-gray-800 rounded-lg shadow-xl p-8 max-h-fit">
+                        <div className="mb-4 flex items-center justify-center">
+                            <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">BACK-END</h1>
                         </div>
-                        <div class="card_comp">
+                        <div className="card_comp">
                             {
                                 language['back-end'].map((language, k) => (
                                     <div key={k}>
-                                        <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-32 space-y-4 mx-auto">
-                                            <img class="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
-                                            <h1 class="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                        <div className="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-32 space-y-4 mx-auto">
+                                            <img className="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                            <h1 className="text-gray-50 font-semibold text-sm">{language.name}</h1>
                                         </div>
                                     </div>
                                 ))

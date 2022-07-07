@@ -1,12 +1,12 @@
 // import { useEffect, useState } from 'react';
-
+import ParticlesBackground from "../components/particles";
 function App() {
 
 	return (
-		<div>
-			
+		<div className='container mx-auto'>
+			<ParticlesBackground/>
 		</div>
-	)
+	);
 
 }
 

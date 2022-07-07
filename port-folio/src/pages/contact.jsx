@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import CheckIcon from '@mui/icons-material/Check';
 import SaveIcon from '@mui/icons-material/Save';
-
+import ParticlesBackground from "../components/particles";
 function App() {
 
     const [open, setOpen] = useState(false);
@@ -158,11 +158,15 @@ function App() {
             </Transition.Root>
             <>
                 <div className='container mx-auto'>
+                <ParticlesBackground/>
+                <div className="flex items-center justify-center">
+                    <h4 className="mt-10 text-xl md:text-4xl font-medium leading-snug text-white">Une demande ?</h4>
+                </div>
                     <div className="content-center">
                         <div className="flex flex-col items-center justify-center w-full px-10 pt-5 pb-20 lg:pt-20 lg:flex-row">
                             <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
                                 <div className="relative z-10 flex flex-col items-start justify-start p-10 bg-gray-800 shadow-2xl rounded-xl h-2/6">
-                                    <h4 className="w-full text-xl md:text-4xl font-medium leading-snug text-white">Une demande ?</h4>
+                                    {/* <h4 className="w-full text-xl md:text-4xl font-medium leading-snug text-white">Une demande ?</h4> */}
                                     <form className="relative w-full mt-6 space-y-8" ref={form} onSubmit={sendEmail}>
                                         <div className="relative">
                                             <label className="absolute px-2 ml-2 -mt-3 text-sm font-medium text-white bg-gray-800">Nom / Prenom</label>
