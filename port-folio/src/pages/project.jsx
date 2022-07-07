@@ -57,7 +57,7 @@ function App() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 dark:bg-opacity-75 transition-opacity" />
+                        <div className="fixed inset-0 bg-opacity-75 transition-opacity" />
                     </Transition.Child>
                     <div className="fixed z-10 inset-0 overflow-y-auto">
                         <div className="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
@@ -80,7 +80,7 @@ function App() {
                                                 <dl>
                                                     <div className='border-2 border-gray-700 rounded-md p-1 overflow-y-auto h-[25rem] sm:h-fit'>
                                                         <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Description</dt>
+                                                            <dt className="text-md font-medium text-gray-400">Intitulé</dt>
                                                             <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{content}</dd>
                                                         </div>
                                                         <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -96,7 +96,7 @@ function App() {
                                                             <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{type}</dd>
                                                         </div>
                                                         <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Intitulé</dt>
+                                                            <dt className="text-md font-medium text-gray-400">Description</dt>
                                                             <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
                                                                 {desc}
                                                             </dd>

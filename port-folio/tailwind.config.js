@@ -7,7 +7,7 @@ module.exports = {
     './components/**/*.{html,js,jsx}',
   ],
   presets: [],
-  darkMode: 'media', // or 'media'
+  // darkMode: 'media', // or 'media'
   theme: {
     screens: {
       'xs': '360px',
