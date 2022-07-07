@@ -20,6 +20,12 @@ html {
     @apply bg-blue-600 font-semibold text-white p-2 w-24 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2;
 }
 
+@screen xs {
+    .card_comp {
+        @apply grid grid-rows-3 grid-flow-col gap-1;
+    }
+}
+
 @screen sm {
     .card {
         @apply grid gap-4 grid-cols-1;
@@ -27,6 +33,9 @@ html {
 }
 
 @screen md {
+    .card_comp {
+        @apply grid grid-rows-3 grid-flow-col gap-1;
+    }
     .card {
         @apply grid gap-4 grid-cols-2;
     }

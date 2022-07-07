@@ -5,15 +5,9 @@ import image from '../assets/ErwanDUREY.png'
 import pdf_file from '../assets/cv.pdf'
 import language from '../assets/langage.json'
 // import test from '../assets/test.json'
-import logo from '../assets/image'
+import logo from '../assets/logo'
 
 function App() {
-
-
-    // test.map((language) => {
-
-    //     console.log(language.language[0].php[0].type);
-    // })
 
     const [open, setOpen] = useState(false);
     const handeleOpen = () => setOpen(true)
@@ -35,7 +29,7 @@ function App() {
     return (
         <div>
             <Transition.Root show={open} as={Fragment}>
-            <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={handeleClose}>
+                <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={handeleClose}>
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -115,7 +109,7 @@ function App() {
                             </div>
                         </div>
                         <div class="mt-6 py-6 border-t border-slate-200 text-center">
-                            <div class="flex flex-wrap justify-center">
+                            <div class="flex flex-wrap justify-center ">
                                 <div class="w-full px-4">
                                     <p class="font-light leading-relaxed text-gray-400 mb-4">Décidé à faire de ma
                                         passion un métier, j'ai
@@ -142,121 +136,56 @@ function App() {
                     </div>
                 </div>
 
-                <div class="flex md:items-center md:justify-center">
+                <div class="flex items-center justify-center">
                     <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">MES COMPÉTENCES</h1>
                 </div>
 
-                <div className='flex justify-between items-center'>
 
-                    <div class="flex items-center justify-center">
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-8">
-                            <div class="mb-4">
-                                <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">JS</h1>
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/43.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Vivian Davie</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                <div class="bg-gray-800 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto">
+
+                    <div class="grid grid-cols-2 md:lg:xl:grid-cols-5 group">
+                        {
+                            language['front-end'].map((language, k) => (
+                                <div key={k} class="p-5 flex flex-col items-center text-center group">
+                                    <img class="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                    <h1 class="text-gray-50 font-semibold text-sm">{language.name}</h1>
                                 </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/men/81.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Derry Harris</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
+                            ))
+                        }
+                        {
+                            language['back-end'].map((language, k) => (
+                                <div key={k} class="p-5 flex flex-col items-center text-center group">
+                                    <img class="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                    <h1 class="text-gray-50 font-semibold text-sm">{language.name}</h1>
                                 </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Aliesha Hanson</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/13.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Cristina Frederick</h1>
-                                    <button class="px-6 py-1 border-2 border-indigo-600 rounded-full text-gray-50 font-semibold">Following</button>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+                        }
                     </div>
-
-                    <div class="flex items-center justify-center">
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-8">
-                            <div class="mb-4">
-                                <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">JS</h1>
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/43.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Vivian Davie</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/men/81.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Derry Harris</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Aliesha Hanson</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/13.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Cristina Frederick</h1>
-                                    <button class="px-6 py-1 border-2 border-indigo-600 rounded-full text-gray-50 font-semibold">Following</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center justify-center">
-                        <div class="bg-gray-800 rounded-lg shadow-xl p-8">
-                            <div class="mb-4">
-                                <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">JS</h1>
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/43.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Vivian Davie</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/men/81.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Derry Harris</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/2.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Aliesha Hanson</h1>
-                                    <button class="px-8 py-1 border-2 border-indigo-600 bg-indigo-600 rounded-full text-gray-50 font-semibold">Follow</button>
-                                </div>
-                                <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-48 space-y-4">
-                                    <img class="rounded-full border-gray-100 shadow-sm w-24 h-24" src="https://randomuser.me/api/portraits/women/13.jpg" alt="user image" />
-                                    <h1 class="text-gray-50 font-semibold">Cristina Frederick</h1>
-                                    <button class="px-6 py-1 border-2 border-indigo-600 rounded-full text-gray-50 font-semibold">Following</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                {/* <div class="bg-gray-800 rounded-lg shadow-xl p-8 max-h-fit">
+                        <div class="mb-4 flex items-center justify-center">
+                            <h1 class="text-2xl text-indigo-500 font-bold leading-normal mb-1">BACK-END</h1>
+                        </div>
+                        <div class="card_comp">
+                            {
+                                language['back-end'].map((language, k) => (
+                                    <div key={k}>
+                                        <div class="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-32 space-y-4 mx-auto">
+                                            <img class="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                            <h1 class="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div> */}
+
             </div>
+
         </div>
     )
 
 }
 
 export default App
-
-// {language.map((product) => (
-//     <a key={product.id} href={product.href} className="group">
-//         <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
-//             <img
-//                 src={product.imageSrc}
-//                 alt={product.imageAlt}
-//                 className="w-full h-full object-center object-cover group-hover:opacity-75"
-//             />
-//         </div>
-//         <h3 className="mt-4 text-sm text-gray-400">{product.name}</h3>
-//         {/* <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p> */}
-//     </a>
-// ))}

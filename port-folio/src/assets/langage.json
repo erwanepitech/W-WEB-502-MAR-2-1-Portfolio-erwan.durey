@@ -1,30 +1,104 @@
-[
-    {
-        "id": 1,
-        "name": "Earthen Bottle",
-        "href": "#",
-        "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-        "imageAlt": "Tall slender porcelain bottle with natural clay textured body and cork stopper."
-    },
-    {
-        "id": 2,
-        "name": "Nomad Tumbler",
-        "href": "#",
-        "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg",
-        "imageAlt": "Olive drab green insulated bottle with flared screw lid and flat top."
-    },
-    {
-        "id": 3,
-        "name": "Focus Paper Refill",
-        "href": "#",
-        "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg",
-        "imageAlt": "Person using a pen to cross a task off a productivity paper card."
-    },
-    {
-        "id": 4,
-        "name": "Machined Mechanical Pencil",
-        "href": "#",
-        "imageSrc": "https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg",
-        "imageAlt": "Hand holding black machined steel mechanical pencil with brass tip and top."
-    }
-]
+{
+    "front-end": [
+        {
+            "id": 1,
+            "name": "html",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
+            "imageAlt": "html 5 logo"
+        },
+        {
+            "id": 2,
+            "name": "css",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/5968/5968242.png",
+            "imageAlt": "css 3 logo"
+        },
+        {
+            "id": 3,
+            "name": "React js",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
+            "imageAlt": "react logo"
+        },
+        {
+            "id": 4,
+            "name": "js",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+            "imageAlt": "js logo"
+        },
+        {
+            "id": 5,
+            "name": "Tailwind css",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_97/3_tailwind-css-icon.5009c3dbea.svg",
+            "imageAlt": "Tailwind logo"
+        }
+    ],
+    "back-end": [
+        {
+            "id": 1,
+            "name": "PHP",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/5968/5968332.png",
+            "imageAlt": "PHP logo"
+        },
+        {
+            "id": 2,
+            "name": "Node js",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/919/919825.png",
+            "imageAlt": "node js logo"
+        },
+        {
+            "id": 3,
+            "name": "React Native",
+            "href": "#",
+            "imageSrc": "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
+            "imageAlt": "React native logo"
+        },
+        {
+            "id": 4,
+            "name": "Express js",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_79/87_expressjs.98a8557541.svg",
+            "imageAlt": "express js logo"
+        },
+        {
+            "id": 5,
+            "name": "mysql",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_88/137_mysql-official.c213f87f65.svg",
+            "imageAlt": "mysql logo"
+        },
+        {
+            "id": 6,
+            "name": "mongodb",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_261/25_mongodb.cef7d00b8a.svg",
+            "imageAlt": "mongodb logo"
+        },
+        {
+            "id": 7,
+            "name": "socket io",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_96/15_socketio.2c4cc254de.svg",
+            "imageAlt": "socketio logo"
+        },
+        {
+            "id": 8,
+            "name": "Symfony",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_96/160_symfony.b0fe091cea.svg",
+            "imageAlt": "symfony logo"
+        },
+        {
+            "id": 9,
+            "name": "Laravel",
+            "href": "#",
+            "imageSrc": "https://symbols.getvecta.com/stencil_87/7_laravel.9233551963.svg",
+            "imageAlt": "laravel logo"
+        }
+    ]
+}
