@@ -13,7 +13,7 @@ function Switcher() {
     };
 
     return (
-        <div className="flex items-center">
+        <div className="flex items-center right-0">
             <DarkModeSwitch
                 checked={darkSide}
                 onChange={toggleDarkMode}
