@@ -50,15 +50,15 @@ const config_particles = {
             }
         },
         "line_linked": {
-            "enable": false,
+            "enable": true,
             "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
+            "color": "#6366f1",
+            "opacity": 0.2,
             "width": 1
         },
         "move": {
             "enable": true,
-            "speed": 1,
+            "speed": 0.5,
             "direction": "none",
             "random": true,
             "straight": false,
@@ -79,7 +79,7 @@ const config_particles = {
                 "mode": "grab"
             },
             "onclick": {
-                "enable": true,
+                "enable": false,
                 "mode": "repulse"
             },
             "resize": true

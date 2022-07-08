@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-import './test.css';
+import './style.css';
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Home from './pages/home';
@@ -11,7 +10,6 @@ import {
 	BrowserRouter as Router,
 	Route,
 	Routes,
-	// Navigate,
 } from 'react-router-dom';
 
 function App() {

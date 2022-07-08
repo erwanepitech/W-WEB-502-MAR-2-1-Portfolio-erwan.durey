@@ -1,7 +1,6 @@
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import project from '../assets/project.json'
-import ParticlesBackground from "../components/particles";
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -19,12 +18,10 @@ function shuffle(array) {
 const card = shuffle(project);
 
 function App() {
-
     const [open, setOpen] = useState(false);
     const handeleOpen = () => setOpen(true)
     const handeleClose = () => setOpen(false)
     const cancelButtonRef = useRef(null)
-
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const [language, setLanguage] = useState("")
@@ -34,8 +31,8 @@ function App() {
     const [time, setTime] = useState("")
 
     const handelClick = (id) => {
-        handeleOpen()
         const found = card.find(element => element.id === parseInt(id))
+        handeleOpen()
         setTitle(found.title)
         setContent(found.content)
         setLanguage(found.language)
@@ -58,8 +55,7 @@ function App() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity"/>
-                            {/* <ParticlesBackground /> */}
+                        <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
                     </Transition.Child>
                     <div className="fixed z-10 inset-0 overflow-y-auto">
                         <div className="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
@@ -72,8 +68,8 @@ function App() {
                                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                             >
-                                <Dialog.Panel className="relative bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-fit sm:w-full">
-                                    <div className="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <Dialog.Panel className="modal">
+                                    <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                         <div className="sm:flex sm:items-start">
                                             <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                                 <Dialog.Title as="h3" className="text-xl leading-6 font-medium text-indigo-500 mb-2">
@@ -81,30 +77,30 @@ function App() {
                                                 </Dialog.Title>
                                                 <dl>
                                                     <div className='border-2 border-gray-700 rounded-md p-1 overflow-y-auto h-[25rem] sm:h-fit'>
-                                                        <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Intitulé</dt>
-                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{content}</dd>
+                                                        <div className="dark:bg-gray-900 bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Intitulé</dt>
+                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold">{content}</dd>
                                                         </div>
-                                                        <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Langage &amp; tehno</dt>
+                                                        <div className="dark:bg-gray-800 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Langage &amp; tehno</dt>
                                                             <dd className="mt-1 sm:mt-0 sm:col-span-2 uppercase tracking-wide text-sm text-indigo-500 font-semibold"><code>{language}</code></dd>
                                                         </div>
-                                                        <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Temps de realisation</dt>
-                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{time}</dd>
+                                                        <div className="dark:bg-gray-900 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Temps de realisation</dt>
+                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold">{time}</dd>
                                                         </div>
-                                                        <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Type de projet</dt>
-                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{type}</dd>
+                                                        <div className="dark:bg-gray-800 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Type de projet</dt>
+                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold">{type}</dd>
                                                         </div>
-                                                        <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Description</dt>
-                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
+                                                        <div className="dark:bg-gray-900 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Description</dt>
+                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
                                                                 {desc}
                                                             </dd>
                                                         </div>
-                                                        <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium text-gray-400">Repository</dt>
+                                                        <div className="dark:bg-gray-800 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Repository</dt>
                                                             <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
                                                                 <button
                                                                     type="button"
@@ -125,7 +121,7 @@ function App() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="bg-gray-900 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                    <div className="dark:bg-gray-900 bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button
                                             type="button"
                                             className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
@@ -142,17 +138,15 @@ function App() {
                 </Dialog>
             </Transition.Root>
             <div className='container mx-auto'>
-                {/* <ParticlesBackground /> */}
-
-                <div className="card mx-8">
+                <div className="card_container">
                     {card.map((item, k) => (
                         <div key={k}>
-                            <div className="max-w-md mx-auto bg-gray-800 rounded-xl h-[220px] shadow-md overflow-hidden md:max-w-2xl">
+                            <div className="card">
                                 <div className="md:flex">
-                                    <div className="p-8">
-                                        <p className="block mt-1 text-lg leading-tight font-medium text-white">{item.title}</p>
+                                    <div className="p-5">
+                                        <p className="card_title">{item.title}</p>
                                         <div className="border-t border-indigo-500 mb-1 mt-1"></div>
-                                        <p className="mt-2 text-slate-300">{item.content}</p>
+                                        <p className="card_content">{item.content}</p>
                                         <div className='flex pt-5 justify-center'>
                                             <button className="btn-blue">
                                                 <a className="text-white flex" href={item.link} target="_blank" rel="noreferrer">

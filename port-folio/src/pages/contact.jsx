@@ -27,7 +27,7 @@ function App() {
     const [user_name, setUser_name] = useState("");
 
     const form = useRef();
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const timer = useRef();
 
     const buttonSx = {
@@ -58,7 +58,6 @@ function App() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         // message = ""
         // email = ""
         // tel = ""
@@ -66,20 +65,34 @@ function App() {
 
         emailjs.sendForm('service_cxshpkg', 'template_gw3cz8p', form.current, 'bEGg7kcG2OQX3kBvP')
             .then((result) => {
-                console.log(result.text);
                 setSuccess(true)
+                setMessage("")
                 setTitle('Merci pour votre email')
                 setText('Un email à bien été envoyer')
                 handeleOpen()
             }, (error) => {
-                console.log(error.text);
                 setSuccess(false)
                 setTitle('Toute nos excuses')
                 setText('Une erreur est survenue lors de l\'envoi de l\'email merci de réessayer plus tard')
                 handeleOpen()
             });
-
     };
+
+    const info = () => {
+        if (success) {
+            return (
+                <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-white sm:mx-0 sm:h-10 sm:w-10">
+                    <InformationCircleIcon className="h-6 w-6 text-indigo-500" aria-hidden="true" />
+                </div>
+            )
+        } else {
+            return (
+                <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                    <ExclamationIcon className="h-6 w-6 text-red-500" aria-hidden="true" />
+                </div>
+            )
+        }
+    }
 
     return (
         <>
@@ -94,7 +107,7 @@ function App() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-white dark:bg-black dark:bg-opacity-75 transition-opacity" />
+                        <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
                     </Transition.Child>
 
                     <div className="fixed z-10 inset-0 overflow-y-auto">
@@ -108,39 +121,23 @@ function App() {
                                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                             >
-                                <Dialog.Panel className="relative bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full">
-                                    <div className="bg-gray-800 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <Dialog.Panel className="relative dark:bg-gray-800 bg-gray-300 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full">
+                                    <div className="dark:bg-gray-800 bg-gray-50 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                         <div className="sm:flex sm:items-start">
-                                            {
-                                                () => {
-                                                    if (success) {
-                                                        return (
-                                                            <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-white sm:mx-0 sm:h-10 sm:w-10">
-                                                                <InformationCircleIcon className="h-6 w-6 text-indigo-500" aria-hidden="true" />
-                                                            </div>
-                                                        )
-                                                    } else {
-                                                        return (
-                                                            <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                                                                <ExclamationIcon className="h-6 w-6 text-red-500" aria-hidden="true" />
-                                                            </div>
-                                                        )
-                                                    }
-                                                }
-                                            }
+                                            {info()}
                                             <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                                                 <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-indigo-500">
                                                     {title}
                                                 </Dialog.Title>
                                                 <div className="mt-2">
-                                                    <p className="text-sm text-gray-400">
+                                                    <p className="text-sm dark:text-gray-400 text-black">
                                                         {text}
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="bg-gray-900 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                    <div className="dark:bg-gray-900 bg-gray-300 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button
                                             type="button"
                                             className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
@@ -157,32 +154,31 @@ function App() {
                 </Dialog>
             </Transition.Root>
             <>
-                <div className='container mx-auto'>
-                {/* <ParticlesBackground/> */}
-                <div className="flex items-center justify-center">
-                    <h4 className="mt-10 text-xl md:text-4xl font-medium leading-snug text-white">Une demande ?</h4>
-                </div>
+                <div className='container mx-auto h-full'>
+                    <div className="flex items-center justify-center">
+                        <h4 className="mt-10 text-xl md:text-4xl font-medium leading-snug text-black dark:text-white">Une demande ?</h4>
+                    </div>
                     <div className="content-center">
                         <div className="flex flex-col items-center justify-center w-full px-10 pt-5 pb-20 lg:pt-20 lg:flex-row">
                             <div className="relative z-10 w-full max-w-2xl mt-20 lg:mt-0 lg:w-5/12">
-                                <div className="relative z-10 flex flex-col items-start justify-start p-10 bg-gray-800 shadow-2xl rounded-xl h-2/6">
+                                <div className="relative z-10 flex flex-col items-start justify-start p-10 bg-slate-300 dark:bg-gray-800 shadow-2xl rounded-xl h-2/6">
                                     {/* <h4 className="w-full text-xl md:text-4xl font-medium leading-snug text-white">Une demande ?</h4> */}
                                     <form className="relative w-full mt-6 space-y-8" ref={form} onSubmit={sendEmail}>
                                         <div className="relative">
-                                            <label className="absolute px-2 ml-2 -mt-3 text-sm font-medium text-white bg-gray-800">Nom / Prenom</label>
-                                            <input type="text" name="user_name" className="block w-full px-4 py-4 mt-2 xs:text-sm text-white placeholder-gray-400 bg-gray-800 border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500" placeholder="John" required />
+                                            <label className="absolute px-2 ml-2 -mt-3 text-sm font-medium text-black bg-slate-300 dark:bg-gray-800 dark:text-white">Nom / Prenom</label>
+                                            <input type="text" name="user_name" className="contact_input" placeholder="John" required />
                                         </div>
                                         <div className="relative">
-                                            <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-white bg-gray-800">Address Email</label>
-                                            <input type="email" name="user_email" className="block w-full xs:text-sm px-4 py-4 mt-2 text-white placeholder-gray-400 bg-gray-800 border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500" placeholder="exemple@email.com" required />
+                                            <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-black bg-slate-300 dark:bg-gray-800 dark:text-white">Address Email</label>
+                                            <input type="email" name="user_email" className="contact_input" placeholder="exemple@email.com" required />
                                         </div>
                                         <div className="relative">
-                                            <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-white bg-gray-800">Téléphone</label>
-                                            <input type="tel" name="phone_number" className="block w-full xs:text-sm px-4 py-4 mt-2 text-white placeholder-gray-400 bg-gray-800 border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500" placeholder="06 00 00 00 00" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required />
+                                            <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-black bg-slate-300 dark:bg-gray-800 dark:text-white">Téléphone</label>
+                                            <input type="tel" name="phone_number" className="contact_input" placeholder="06 00 00 00 00" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required />
                                         </div>
                                         <div className="relative">
-                                            <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-white bg-gray-800">Message</label>
-                                            <textarea name="message" className="block w-full px-4 py-4 mt-2 xs:text-sm text-white placeholder-gray-400 bg-gray-800 border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500 h-28" placeholder="Merci de détailler votre besoin aux maximum" required />
+                                            <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-black bg-slate-300 dark:bg-gray-800 dark:text-white">Message</label>
+                                            <textarea name="message" className="contact_area_input" placeholder="Merci de détailler votre besoin aux maximum" required />
                                         </div>
                                         <div className="relative">
                                             {/* <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -215,7 +211,7 @@ function App() {
                                         </div>
                                     </form>
                                 </div>
-                                <svg className="absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 text-gray-200 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg">
+                                <svg className="absolute top-0 left-0 z-0 w-32 h-32 -mt-12 -ml-12 dark:text-gray-200 fill-current" viewBox="0 0 91 91" xmlns="http://www.w3.org/2000/svg">
                                     <g stroke="none" strokeWidth="1" fillRule="evenodd">
                                         <g fillRule="nonzero">
                                             <g>

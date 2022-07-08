@@ -2,72 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    background-color: #0d1117;
+body {
+    @apply bg-slate-200 dark:bg-gray-900;
 }
-
-/* #tsparticles {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-} */
 
 .nav_bar {
     top: 0;
-    /* position: sticky; */
     z-index: 11;
+    @apply bg-slate-600 dark:bg-gray-800 opacity-90;
+}
+
+.card_container {
+    @apply grid gap-4 grid-cols-1 mt-6 mx-8;
 }
 
 .card {
-    @apply grid gap-4 grid-cols-1 mt-6;
+    @apply mx-auto opacity-90 dark:bg-gray-800 bg-slate-300 rounded-xl h-[220px] shadow-md overflow-hidden md:max-w-2xl;
+}
+
+.card_title {
+    @apply block mt-1 text-lg leading-tight font-medium dark:text-white text-black;
+}
+
+.card_content {
+    @apply mt-2 dark:text-slate-300 text-black;
 }
 
 .btn-blue {
     @apply bg-indigo-500 font-semibold text-white p-2 w-24 rounded-lg hover:bg-indigo-800 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2;
 }
 
-@screen xs {
-    .card_comp {
-        @apply grid grid-rows-3 grid-flow-col gap-1;
-    }
+.modal {
+    @apply relative dark:bg-gray-800 bg-gray-300 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-fit sm:w-full;
 }
 
-@screen sm {
-    .card {
-        @apply grid gap-4 grid-cols-1;
-    }
+.contact_input {
+    @apply block w-full xs:text-sm px-4 py-4 mt-2 text-black dark:placeholder-gray-400 placeholder-gray-500 bg-slate-300 dark:bg-gray-800 dark:text-white border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500;
 }
 
-@screen md {
-    .card_comp {
-        @apply grid grid-rows-3 grid-flow-col gap-1;
-    }
-
-    .card {
-        @apply grid gap-4 grid-cols-2;
-    }
+.contact_area_input {
+    @apply block w-full px-4 py-4 mt-2 xs:text-sm text-black dark:placeholder-gray-400 placeholder-gray-500 bg-slate-300 dark:bg-gray-800 dark:text-white border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500 h-28;
 }
 
-@screen lg {
-    .card {
-        @apply grid gap-4 grid-cols-3;
-    }
+.about_card {
+    @apply mx-5 opacity-90 dark:bg-gray-800 bg-slate-300 rounded-xl p-5 w-fit;
 }
 
-@screen xl {
-    .card {
-        @apply grid gap-4 grid-cols-4;
-    }
-}
-
-@screen 2xl {
-    .card {
-        @apply grid gap-4 grid-cols-4;
-    }
+.skils_card {
+    @apply opacity-90 dark:bg-gray-800 bg-slate-300 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto;
 }
 
 .hover\:text-li:hover {
@@ -79,6 +61,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    @apply bg-slate-600 dark:bg-gray-800 opacity-90;
 }
 
 .react-pdf__Page__canvas {
@@ -86,4 +69,51 @@ footer {
     width: 100% !important;
     height: 100% !important;
     @apply rounded-md;
+}
+
+@screen xs {
+    .card_comp {
+        @apply grid grid-rows-3 grid-flow-col gap-1;
+    }
+}
+
+@screen sm {
+    .card_container {
+        @apply grid gap-4 grid-cols-1 mx-8;
+    }
+}
+
+@screen md {
+    #root {
+        @apply h-screen;
+    }
+
+    .card_comp {
+        @apply grid grid-rows-3 grid-flow-col gap-1;
+    }
+
+    .card_container {
+        @apply grid gap-4 grid-cols-2 mx-8;
+    }
+}
+
+@screen lg {
+    .card_container {
+        @apply grid gap-4 grid-cols-3 mx-8;
+    }
+    #root {
+        @apply h-fit;
+    }
+}
+
+@screen xl {
+    .card_container {
+        @apply grid gap-4 grid-cols-4 mx-8;
+    }
+}
+
+@screen 2xl {
+    .card_container {
+        @apply grid gap-4 grid-cols-4 mx-8;
+    }
 }
