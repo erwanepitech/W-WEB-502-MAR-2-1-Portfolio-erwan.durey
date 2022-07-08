@@ -48,8 +48,8 @@ function App() {
                                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                             >
-                                <Dialog.Panel className="modal">
-                                    <div className="dark:bg-gray-800 bg-gray-300 px-2 pt-5 pb-4 sm:p-6 sm:pb-4">
+                                <Dialog.Panel className="relative bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-fit sm:w-full">
+                                    <div className="bg-gray-800 px-2 pt-5 pb-4 sm:p-6 sm:pb-4">
                                         <div className="sm:flex sm:items-start">
 
                                             <div className="mt-3 text-center sm:mt-0 sm:text-left">
@@ -62,7 +62,7 @@ function App() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="dark:bg-gray-900 bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                    <div className="bg-gray-900 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button
                                             type="button"
                                             className="mt-3 w-full rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
@@ -90,7 +90,7 @@ function App() {
             </Transition.Root>
             <div className='container mx-auto'>
                 <div className="relative max-w-md mx-auto md:max-w-2xl mt-20 min-w-0 break-words w-full mb-6 ">
-                    <div className="about_card">
+                    <div className="mx-5 opacity-90 bg-gray-800 rounded-xl p-5 w-fit">
                         <div className="flex flex-wrap justify-center">
                             <div className="w-full flex justify-center mb-16">
                                 <div className="relative">
@@ -100,14 +100,14 @@ function App() {
                         </div>
                         <div className="text-center mt-2">
                             <h3 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">Erwan Durey</h3>
-                            <div className="text-xs mt-0 mb-2 dark:text-slate-400 text-black font-bold uppercase">
-                                <i className="fas fa-map-marker-alt mr-2 dark:text-slate-400 text-black opacity-75"></i>La seyne sur mer, France
+                            <div className="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
+                                <i className="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i>La seyne sur mer, France
                             </div>
                         </div>
-                        <div className="mt-6 py-6 border-t border-indigo-500 text-center">
+                        <div className="mt-6 py-6 border-t border-slate-200 text-center">
                             <div className="flex flex-wrap justify-center ">
                                 <div className="w-full px-4">
-                                    <p className="font-light leading-relaxed dark:text-gray-400 text-black mb-4">Décidé à faire de ma
+                                    <p className="font-light leading-relaxed text-gray-400 mb-4">Décidé à faire de ma
                                         passion un métier, j'ai
                                         commencé ma formation
                                         chez Epitech.
@@ -115,6 +115,7 @@ function App() {
                                         ressources capable de
                                         s'adapter aux contraintes
                                         et directives données.</p>
+                                    {/* <a href="" className="font-normal text-slate-700 hover:text-slate-400">Follow Account</a> */}
                                     <button
                                         onClick={handelClick}
                                         type="button"
@@ -135,7 +136,7 @@ function App() {
                     <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-5">MES COMPÉTENCES</h1>
                 </div>
 
-                <div className="skils_card mb-10">
+                <div className="opacity-90 bg-gray-800 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto mb-10">
                     <div className="flex items-center justify-center">
                         <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">FRON-END</h1>
                     </div>
@@ -151,7 +152,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className="skils_card">
+                <div className="opacity-90 bg-gray-800 rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto">
                     <div className="flex items-center justify-center">
                         <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">BACK-END</h1>
                     </div>
@@ -166,6 +167,24 @@ function App() {
                         }
                     </div>
                 </div>
+
+                {/* <div className="bg-gray-800 rounded-lg shadow-xl p-8 max-h-fit">
+                        <div className="mb-4 flex items-center justify-center">
+                            <h1 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">BACK-END</h1>
+                        </div>
+                        <div className="card_comp">
+                            {
+                                language['back-end'].map((language, k) => (
+                                    <div key={k}>
+                                        <div className="flex items-center justify-center flex-col bg-gray-700 p-4 rounded-lg w-32 space-y-4 mx-auto">
+                                            <img className="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
+                                            <h1 className="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div> */}
 
             </div>
 

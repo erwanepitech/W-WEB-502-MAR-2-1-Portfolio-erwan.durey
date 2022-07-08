@@ -18,10 +18,12 @@ function shuffle(array) {
 const card = shuffle(project);
 
 function App() {
+
     const [open, setOpen] = useState(false);
     const handeleOpen = () => setOpen(true)
     const handeleClose = () => setOpen(false)
     const cancelButtonRef = useRef(null)
+
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
     const [language, setLanguage] = useState("")
@@ -31,8 +33,8 @@ function App() {
     const [time, setTime] = useState("")
 
     const handelClick = (id) => {
-        const found = card.find(element => element.id === parseInt(id))
         handeleOpen()
+        const found = card.find(element => element.id === parseInt(id))
         setTitle(found.title)
         setContent(found.content)
         setLanguage(found.language)
@@ -77,30 +79,30 @@ function App() {
                                                 </Dialog.Title>
                                                 <dl>
                                                     <div className='border-2 border-gray-700 rounded-md p-1 overflow-y-auto h-[25rem] sm:h-fit'>
-                                                        <div className="dark:bg-gray-900 bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Intitulé</dt>
-                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold">{content}</dd>
+                                                        <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium text-gray-400">Intitulé</dt>
+                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{content}</dd>
                                                         </div>
-                                                        <div className="dark:bg-gray-800 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Langage &amp; tehno</dt>
+                                                        <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium text-gray-400">Langage &amp; tehno</dt>
                                                             <dd className="mt-1 sm:mt-0 sm:col-span-2 uppercase tracking-wide text-sm text-indigo-500 font-semibold"><code>{language}</code></dd>
                                                         </div>
-                                                        <div className="dark:bg-gray-900 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Temps de realisation</dt>
-                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold">{time}</dd>
+                                                        <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium text-gray-400">Temps de realisation</dt>
+                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{time}</dd>
                                                         </div>
-                                                        <div className="dark:bg-gray-800 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Type de projet</dt>
-                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold">{type}</dd>
+                                                        <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium text-gray-400">Type de projet</dt>
+                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold">{type}</dd>
                                                         </div>
-                                                        <div className="dark:bg-gray-900 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Description</dt>
-                                                            <dd className="mt-1 text-sm dark:text-gray-400 text-black sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
+                                                        <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium text-gray-400">Description</dt>
+                                                            <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
                                                                 {desc}
                                                             </dd>
                                                         </div>
-                                                        <div className="dark:bg-gray-800 bg-white border-t border-gray-400 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                                                            <dt className="text-md font-medium dark:text-gray-400 text-black">Repository</dt>
+                                                        <div className="bg-gray-800 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                                                            <dt className="text-md font-medium text-gray-400">Repository</dt>
                                                             <dd className="mt-1 text-sm text-white sm:mt-0 sm:col-span-2 font-semibold max-w-xs break-words">
                                                                 <button
                                                                     type="button"
@@ -121,7 +123,7 @@ function App() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="dark:bg-gray-900 bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                    <div className="bg-gray-900 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                         <button
                                             type="button"
                                             className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
@@ -146,7 +148,7 @@ function App() {
                                     <div className="p-5">
                                         <p className="card_title">{item.title}</p>
                                         <div className="border-t border-indigo-500 mb-1 mt-1"></div>
-                                        <p className="card_content">{item.content}</p>
+                                        <p className="mt-2 text-slate-300">{item.content}</p>
                                         <div className='flex pt-5 justify-center'>
                                             <button className="btn-blue">
                                                 <a className="text-white flex" href={item.link} target="_blank" rel="noreferrer">
