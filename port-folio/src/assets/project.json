@@ -94,7 +94,7 @@
         "title": "My_Quiz",
         "language": "PHP, Symfony",
         "link": "https://github.com/erwanepitech/-W-PHP-502-MAR-2-1-Quiz-erwan.durey-",
-        "content": "Site de quiz avec sytem analytic pour cibler le contenu",
+        "content": "Site de quiz avec system analytic pour cibler le contenu",
         "describe": "Vous allez développer un site qui permet de tester sa culture générale à travers des quiz. Dans le but de cibler le contenu que votre site proposera, vous pouvez relever l’activité de vos utilisateurs. Pour cela vous devez récolter un maximum d’informations sur eux, sur les sujets qui les intéressent, leurs habitudes, leurs préférences, etc.",
         "time": "2 semaines",
         "type": "En groupe 3"
