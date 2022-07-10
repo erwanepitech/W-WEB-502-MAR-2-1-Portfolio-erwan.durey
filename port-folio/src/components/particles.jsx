@@ -1,6 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import particle_config from '../assets/particles-config'
+import config_particles from "../assets/particles-config"
+
 function App() {
 
     const ParticlesInit = async (main) => {
@@ -12,7 +13,7 @@ function App() {
             id="tsparticles"
             init={ParticlesInit}
             options={
-                particle_config
+                config_particles
             }
         />
     );

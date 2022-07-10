@@ -2,25 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    background-color: #0d1117;
+body {
+    @apply bg-slate-200 dark:bg-gray-900;
+}
+
+nav span:hover {
+	cursor: pointer;
+}
+
+section {
+    @apply py-10;
+}
+
+#projectContainer {
+    @apply md:h-fit
+}
+
+#homeContainer {
+    height: 100vh;; 
+}
+
+#homeContainer {
+    @apply flex content-center justify-center my-auto pt-0;
 }
 
 .nav_bar {
+    position: sticky;
     top: 0;
     z-index: 11;
+    @apply bg-slate-600 dark:bg-gray-800 opacity-90;
 }
 
 .card_container {
-    @apply grid gap-4 grid-cols-1 mt-6 mx-8;
+    @apply grid gap-4 grid-cols-1 mt-6 mx-8 xs:mx-0;
 }
 
 .card {
-    @apply mx-auto opacity-90 bg-gray-800 rounded-xl h-[220px] shadow-md overflow-hidden md:max-w-2xl;
+    @apply mx-auto opacity-90 dark:bg-gray-800 bg-white rounded-xl h-[220px] shadow-md overflow-hidden md:max-w-2xl;
 }
 
 .card_title {
-    @apply block mt-1 text-lg leading-tight font-medium text-white;
+    @apply block mt-1 text-lg leading-tight font-medium dark:text-white text-black;
+}
+
+.card_content {
+    @apply mt-2 dark:text-slate-300 text-black;
 }
 
 .btn-blue {
@@ -28,18 +54,53 @@ html {
 }
 
 .modal {
-    @apply relative bg-gray-800 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-fit sm:w-full;
+    @apply relative dark:bg-gray-800 bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-fit sm:w-full;
+}
+
+.contact_input {
+    @apply block w-full xs:text-sm px-4 py-4 mt-2 text-black dark:placeholder-gray-400 placeholder-gray-500 bg-white dark:bg-gray-800 dark:text-white border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500;
+}
+
+.contact_area_input {
+    @apply block w-full px-4 py-4 mt-2 xs:text-sm text-black dark:placeholder-gray-400 placeholder-gray-500 bg-white dark:bg-gray-800 dark:text-white border border-gray-400 rounded-md focus:outline-none focus:border-indigo-500 h-28;
+}
+
+.about_card {
+    @apply mx-5 opacity-90 dark:bg-gray-800 bg-white rounded-xl p-5 w-fit;
+}
+
+.skils_card {
+    @apply opacity-90 dark:bg-gray-800 bg-white rounded-lg shadow-xl p-5 max-h-fit w-fit mx-auto;
+}
+
+.hover\:text-li:hover {
+    --tw-text-opacity: 1;
+    color: #6366f1;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    @apply bg-slate-600 dark:bg-gray-800 opacity-90;
+}
+
+.react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 100% !important;
+    height: 100% !important;
+    @apply rounded-md;
 }
 
 @screen xs {
     .card_comp {
-        @apply grid grid-rows-3 grid-flow-col gap-1;
+        @apply grid grid-rows-3 grid-flow-col gap-1 h-fit;
     }
 }
 
 @screen sm {
     .card_container {
-        @apply grid gap-4 grid-cols-1 mx-8;
+        @apply grid gap-4 grid-cols-1 mx-8 h-fit;
     }
 }
 
@@ -53,13 +114,13 @@ html {
     }
 
     .card_container {
-        @apply grid gap-4 grid-cols-2 mx-8;
+        @apply grid gap-4 grid-cols-2 mx-8 h-fit;
     }
 }
 
 @screen lg {
     .card_container {
-        @apply grid gap-4 grid-cols-3 mx-8;
+        @apply grid gap-4 grid-cols-3 mx-8 h-fit;
     }
     #root {
         @apply h-fit;
@@ -76,22 +137,4 @@ html {
     .card_container {
         @apply grid gap-4 grid-cols-4 mx-8;
     }
-}
-
-.hover\:text-li:hover {
-    --tw-text-opacity: 1;
-    color: #6366f1;
-}
-
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.react-pdf__Page__canvas {
-    margin: 0 auto;
-    width: 100% !important;
-    height: 100% !important;
-    @apply rounded-md;
 }
