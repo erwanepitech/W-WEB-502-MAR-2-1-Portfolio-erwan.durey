@@ -130,19 +130,19 @@ function Contact() {
                                 <form className="relative w-full mt-6 space-y-8" ref={form} onSubmit={sendEmail}>
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 text-sm font-medium text-black bg-white dark:bg-gray-800 dark:text-white">Nom / Prenom</label>
-                                        <input type="text" name="user_name" className="contact_input" placeholder="John" value={user_name} onChange={setUser_name} required />
+                                        <input type="text" name="user_name" className="contact_input" placeholder="John" value={user_name} onChange={(e)=>{setUser_name(e.target.value)}} required />
                                     </div>
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-black bg-white dark:bg-gray-800 dark:text-white">Address Email</label>
-                                        <input type="email" name="user_email" className="contact_input" placeholder="exemple@email.com" value={email} onChange={setEmail} required />
+                                        <input type="email" name="user_email" className="contact_input" placeholder="exemple@email.com" value={email} onChange={(e)=>{setEmail(e.target.value)}} required />
                                     </div>
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-black bg-white dark:bg-gray-800 dark:text-white">Téléphone</label>
-                                        <input type="tel" name="phone_number" className="contact_input" placeholder="06 00 00 00 00" value={tel} onChange={setTel} pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required />
+                                        <input type="tel" name="phone_number" className="contact_input" placeholder="06 00 00 00 00" value={tel} onChange={(e)=>{setTel(e.target.value)}} pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required />
                                     </div>
                                     <div className="relative">
                                         <label className="absolute px-2 ml-2 -mt-3 font-medium xs:text-sm text-black bg-white dark:bg-gray-800 dark:text-white">Message</label>
-                                        <textarea name="message" className="contact_area_input" value={message} onChange={setMessage} placeholder="Merci de détailler votre besoin aux maximum" required />
+                                        <textarea name="message" className="contact_area_input" value={message} onChange={(e)=>{setMessage(e.target.value)}} placeholder="Merci de détailler votre besoin aux maximum" required />
                                     </div>
                                     <div className="relative">
                                         <button className="inline-block w-full px-5 py-4 text-sm font-medium text-center text-white transition duration-200 bg-blue-600 rounded-lg hover:bg-blue-800 ease">Envoyer</button>
