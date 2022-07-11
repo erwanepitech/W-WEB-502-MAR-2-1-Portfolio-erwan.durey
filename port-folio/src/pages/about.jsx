@@ -103,7 +103,7 @@ function About() {
                         <div className="text-center mt-2">
                             <h3 className="text-2xl text-indigo-500 font-bold leading-normal mb-1">Erwan Durey</h3>
                             <div className="text-xs mt-0 mb-2 dark:text-slate-400 text-black font-bold uppercase">
-                                <i className="fas fa-map-marker-alt mr-2 dark:text-slate-400 text-black opacity-75"></i>La seyne sur mer, France
+                                <i className="fas fa-map-marker-alt mr-2 dark:text-white text-black opacity-75"></i>La seyne sur mer, France
                             </div>
                         </div>
                         <div className="mt-6 py-6 border-t border-indigo-500 text-center">
@@ -148,7 +148,7 @@ function About() {
                             language['front-end'].map((language, k) => (
                                 <div key={k} className="p-5 flex flex-col items-center text-center group">
                                     <img className="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
-                                    <h1 className="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                    <h1 className="dark:text-gray-50 text-black font-semibold text-sm">{language.name}</h1>
                                 </div>
                             ))
                         }
@@ -164,7 +164,7 @@ function About() {
                             language['back-end'].map((language, k) => (
                                 <div key={k} className="p-5 flex flex-col items-center text-center group">
                                     <img className="rounded-lg border-gray-100 w-24 h-24" src={language.imageSrc} alt={language.imageAlt} />
-                                    <h1 className="text-gray-50 font-semibold text-sm">{language.name}</h1>
+                                    <h1 className="dark:text-gray-50 text-black font-semibold text-sm">{language.name}</h1>
                                 </div>
                             ))
                         }
