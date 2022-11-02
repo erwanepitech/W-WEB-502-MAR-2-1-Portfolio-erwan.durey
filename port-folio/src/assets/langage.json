@@ -27,7 +27,7 @@
         {
             "id": 5,
             "name": "Tailwind css",
-            "imageSrc": "https://symbols.getvecta.com/stencil_97/3_tailwind-css-icon.5009c3dbea.svg",
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
             "imageAlt": "Tailwind logo"
         }
     ],
@@ -53,13 +53,13 @@
         {
             "id": 4,
             "name": "Express js",
-            "imageSrc": "https://symbols.getvecta.com/stencil_79/87_expressjs.98a8557541.svg",
+            "imageSrc": "https://assets.website-files.com/61ca3f775a79ec5f87fcf937/6202fcdee5ee8636a145a41b_1234.png",
             "imageAlt": "express js logo"
         },
         {
             "id": 5,
             "name": "mysql",
-            "imageSrc": "https://symbols.getvecta.com/stencil_88/137_mysql-official.c213f87f65.svg",
+            "imageSrc": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png",
             "imageAlt": "mysql logo"
         },
         {
@@ -71,19 +71,19 @@
         {
             "id": 7,
             "name": "socket io",
-            "imageSrc": "https://symbols.getvecta.com/stencil_96/15_socketio.2c4cc254de.svg",
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg",
             "imageAlt": "socketio logo"
         },
         {
             "id": 8,
             "name": "Symfony",
-            "imageSrc": "https://symbols.getvecta.com/stencil_96/160_symfony.b0fe091cea.svg",
+            "imageSrc": "https://seeklogo.com/images/S/symfony-logo-AA34C8FC16-seeklogo.com.png",
             "imageAlt": "symfony logo"
         },
         {
             "id": 9,
             "name": "Laravel",
-            "imageSrc": "https://symbols.getvecta.com/stencil_87/7_laravel.9233551963.svg",
+            "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png",
             "imageAlt": "laravel logo"
         }
     ]
